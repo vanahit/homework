@@ -255,7 +255,7 @@ class App {
 			for (let i = 0; i < this.selectedCars.length; i++) {
 				this.selectedCars[i].move('car-id' + i, this.track.factor);
 				this.intervalId = setInterval(() => {
-					if (this.selectedCars[i].x >= 1020) {
+					if (this.selectedCars[i].x >= screen.width - screen.width * 15 / 100) {
 						this.winnerDiv(this.selectedCars[i].name);
 						this.clearCarsIntervaId();	
 						this.startDesabled();
