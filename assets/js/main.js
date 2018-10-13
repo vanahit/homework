@@ -240,7 +240,12 @@ class App {
 	winnerDiv(carName) {
 		let winner = document.querySelector('.winner-text');
 		winner.style.display = 'block';
+
+		winner.style.top  = (screen.height / 2 - winner.offsetHeight / 2) + 'px';
+		winner.style.left  = (screen.width / 2 - winner.offsetWidth / 2) + 'px';
 		winner.textContent = 'The winner is ' + carName;
+		
+		console.log(winner.offsetWidth);
 	}
 	clearCarsIntervaId() {
 		this.selectedCars.forEach(car => {
@@ -255,7 +260,7 @@ class App {
 			for (let i = 0; i < this.selectedCars.length; i++) {
 				this.selectedCars[i].move('car-id' + i, this.track.factor);
 				this.intervalId = setInterval(() => {
-					if (this.selectedCars[i].x >= screen.width - screen.width * 15 / 100) {
+					if (this.selectedCars[i].x >= screen.width - screen.width * 18.3 / 100) {
 						this.winnerDiv(this.selectedCars[i].name);
 						this.clearCarsIntervaId();	
 						this.startDesabled();

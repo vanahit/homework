@@ -143,10 +143,8 @@ td:nth-child(3) {
 	line-height: 140px;
 	color: white;
 	font-size: 48px;
-	width: 40%;
+	width: 600px;
 	height: 140px;
-	margin-top: 20%;
-	margin-left: 30%;
 	background-color: grey;
 	border-radius: 5px;
 }
